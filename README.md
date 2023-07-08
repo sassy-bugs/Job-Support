@@ -1,6 +1,8 @@
 # Student Support Bot
  A conversational AI , built using Rasa open source framework, with a purpose to solve educational queries. 
 <img src="https://github.com/sassy-bugs/Job-Support/assets/97380939/0cdb1674-355a-4368-93ba-a9e2429120c7" alt = "botAvatar" width="300" height="300" />
+
+Hers is a demo video ~ [Video link](https://drive.google.com/file/d/1gp3jthtlclZCjlK33guDg54gv8f20VAl/view?usp=sharing)
 ### Create a virtual environment and install dependencies
 
 `python3 -m venv venv`
