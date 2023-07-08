@@ -1,0 +1,132 @@
+Engineering
+Science
+Technology
+Arts
+Humanities
+Social Sciences
+Business
+Management
+Law
+Medicine
+Health
+Education
+Humanities
+Agriculture
+Environment
+Architecture
+Design
+Media
+Communication
+Performing Arts
+Visual Arts
+Fashion
+Journalism
+Library Science
+Religion
+Theology
+Philosophy
+History
+Languages
+Literature
+Anthropology
+Archaeology
+Geography
+Political Science
+Psychology
+Sociology
+Economics
+Finance
+Accounting
+Marketing
+Human Resources
+Information Systems
+Computer Science
+Engineering
+Mathematics
+Physics
+Chemistry
+Biology
+Earth Sciences
+Environmental Sciences
+Agriculture
+Architecture
+Design
+Construction
+Engineering
+Manufacturing
+Transportation
+Hospitality
+Tourism
+Culinary Arts
+Education
+Law
+Medicine
+Health
+Nursing
+Pharmacy
+Public Health
+Social Work
+Veterinary Medicine
+Arts
+Humanities
+Social Sciences
+Business
+Management
+Law
+Medicine
+Health
+Education
+Humanities
+Social Sciences
+Agriculture
+Environment
+Architecture
+Design
+Media
+Communication
+Performing Arts
+Visual Arts
+Fashion
+Journalism
+Library Science
+Religion
+Theology
+Philosophy
+History
+Languages
+Anthropology
+Archaeology
+Geography
+Political Science
+Psychology
+Sociology
+Economics
+Finance
+Accounting
+Marketing
+Human Resources
+Information Systems
+Computer Science
+Engineering
+Mathematics
+Physics
+Chemistry
+Biology
+Software Development
+Web Development
+Mobile Development
+Game Development
+Data Science
+Machine Learning
+Artificial Intelligence
+Cyber Security
+Cloud Computing
+Database Administration
+Networking
+Software Engineering
+SWE
+SDE
+Software Development Engineering
+Software Development Engineer
+Software Development Engineer in Test
+App Development

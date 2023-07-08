@@ -109,6 +109,7 @@ slots:
     - online
     - offline
     - hybrid
+    - Work from office
     mappings:
     - type: from_entity
       entity: mode

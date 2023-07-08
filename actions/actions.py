@@ -62,7 +62,7 @@ class ActionInternship(Action):
         domain: Dict[Text, Any],
     ) -> List[Dict]:
         """Executes the action"""
-        slots = ["kind_of_internship", "placeofwork", "domain_of_interest", "work_mode"]
+        slots = ["kind_of_internship", "placeofwork", "domain_of_interest", "mode_of_work"]
 
         for slot in slots:
             if slot not in tracker.slots:
@@ -74,7 +74,7 @@ class ActionInternship(Action):
         kind_of_internship = tracker.get_slot("kind_of_internship")
         placeofwork = tracker.get_slot("placeofwork")
         domain_of_interest = tracker.get_slot("domain_of_interest")
-        work_mode = tracker.get_slot("work_mode")
+        mode_of_work = tracker.get_slot("mode_of_work")
 
         # Search for the internship in DB
         # If found, return the internship
@@ -87,7 +87,7 @@ class ActionInternship(Action):
         dispatcher.utter_message(text="Kind of internship: {}".format(kind_of_internship))
         dispatcher.utter_message(text="Place of work: {}".format(placeofwork))
         dispatcher.utter_message(text="Domain of interest: {}".format(domain_of_interest))
-        dispatcher.utter_message(text="Work mode: {}".format(work_mode))
+        dispatcher.utter_message(text="Work mode: {}".format(mode_of_work))
         return [SlotSet(slot, None) for slot in slots]
 
 # class ValidateInternship(FormValidationAction):
@@ -126,19 +126,19 @@ class ActionInternship(Action):
 #         """Validate domain_of_interest value."""
 #         return {"domain_of_interest": slot_value}
 
-#     def validate_work_mode(
+#     def validate_mode_of_work(
 #         self,
 #         slot_value: Any,
 #         dispatcher: CollectingDispatcher,
 #         tracker: Tracker,
 #         domain: DomainDict,
 #     ) -> Dict[Text, Any]:
-#         """Validate work_mode value."""
+#         """Validate mode_of_work value."""
 #         if slot_value.lower() in ["online", "offline", "hybrid"]:
-#             return {"work_mode": slot_value}
+#             return {"mode_of_work": slot_value}
 #         else:
-#             dispatcher.utter_message(text="Please enter if you'd prefer online, offline or hybrid internships.", buttons=[{"title": "Online", "entity": "work_mode", "value": "online"}, {"title": "Offline", "entity": "work_mode", "value": "offline"}, {"title": "Hybrid", "entity": "work_mode", "value": "hybrid"}])
-#             return {"work_mode": None}
+#             dispatcher.utter_message(text="Please enter if you'd prefer online, offline or hybrid internships.", buttons=[{"title": "Online", "entity": "mode_of_work", "value": "online"}, {"title": "Offline", "entity": "mode_of_work", "value": "offline"}, {"title": "Hybrid", "entity": "mode_of_work", "value": "hybrid"}])
+#             return {"mode_of_work": None}
 
 # class ValidateJob(FormValidationAction):
 
@@ -163,19 +163,19 @@ class ActionInternship(Action):
 #         """Validate domain_of_interest value."""
 #         return {"domain_of_interest": slot_value}
 
-#     def validate_work_mode(
+#     def validate_mode_of_work(
 #         self,
 #         slot_value: Any,
 #         dispatcher: CollectingDispatcher,
 #         tracker: Tracker,
 #         domain: DomainDict,
 #     ) -> Dict[Text, Any]:
-#         """Validate work_mode value."""
+#         """Validate mode_of_work value."""
 #         if slot_value.lower() in ["online", "offline", "hybrid"]:
-#             return {"work_mode": slot_value}
+#             return {"mode_of_work": slot_value}
 #         else:
-#             dispatcher.utter_message(text="Please enter if you'd prefer online, offline or hybrid jobs.", buttons=[{"title": "Online", "entity": "work_mode", "value": "online"}, {"title": "Offline", "entity": "work_mode", "value": "offline"}, {"title": "Hybrid", "entity": "work_mode", "value": "hybrid"}])
-#             return {"work_mode": None}
+#             dispatcher.utter_message(text="Please enter if you'd prefer online, offline or hybrid jobs.", buttons=[{"title": "Online", "entity": "mode_of_work", "value": "online"}, {"title": "Offline", "entity": "mode_of_work", "value": "offline"}, {"title": "Hybrid", "entity": "mode_of_work", "value": "hybrid"}])
+#             return {"mode_of_work": None}
 
 
 # class ValidateOpportunity(FormValidationAction):
@@ -200,19 +200,19 @@ class ActionInternship(Action):
 #         """Validate domain_of_interest value."""
 #         return {"domain_of_interest": slot_value}
 
-#     def validate_work_mode(
+#     def validate_mode_of_work(
 #         self,
 #         slot_value: Any,
 #         dispatcher: CollectingDispatcher,
 #         tracker: Tracker,
 #         domain: DomainDict,
 #     ) -> Dict[Text, Any]:
-#         """Validate work_mode value."""
+#         """Validate mode_of_work value."""
 #         if slot_value.lower() in ["online", "offline", "hybrid"]:
-#             return {"work_mode": slot_value}
+#             return {"mode_of_work": slot_value}
 #         else:
-#             dispatcher.utter_message(text="Please enter if you'd prefer online, offline or hybrid opportunity.", buttons=[{"title": "Online", "entity": "work_mode", "value": "online"}, {"title": "Offline", "entity": "work_mode", "value": "offline"}, {"title": "Hybrid", "entity": "work_mode", "value": "hybrid"}])
-#             return {"work_mode": None}
+#             dispatcher.utter_message(text="Please enter if you'd prefer online, offline or hybrid opportunity.", buttons=[{"title": "Online", "entity": "mode_of_work", "value": "online"}, {"title": "Offline", "entity": "mode_of_work", "value": "offline"}, {"title": "Hybrid", "entity": "mode_of_work", "value": "hybrid"}])
+#             return {"mode_of_work": None}
 
 #     def validate_type_of_opportunity(
 #         self,
@@ -255,7 +255,7 @@ class ActionJob(Action):
         domain: Dict[Text, Any],
     ) -> List[Dict]:
         """Executes the action"""
-        slots = ["placeofwork", "domain_of_interest", "work_mode"]
+        slots = ["placeofwork", "domain_of_interest", "mode_of_work"]
 
         for slot in slots:
             if slot not in tracker.slots:
@@ -264,11 +264,11 @@ class ActionJob(Action):
         
         placeofwork = tracker.get_slot("placeofwork")
         domain_of_interest = tracker.get_slot("domain_of_interest")
-        work_mode = tracker.get_slot("work_mode")
+        mode_of_work = tracker.get_slot("mode_of_work")
         dispatcher.utter_message("We have received the following information:")
         dispatcher.utter_message("Place of work: {}".format(placeofwork))
         dispatcher.utter_message("Domain of interest: {}".format(domain_of_interest))
-        dispatcher.utter_message("Work mode: {}".format(work_mode))
+        dispatcher.utter_message("Work mode: {}".format(mode_of_work))
 
         #Search for job in DB
         #If found, return the job
@@ -291,7 +291,7 @@ class ActionOpportunity(Action):
         domain: Dict[Text, Any],
     ) -> List[Dict]:
         """Executes the action"""
-        slots = ["Type", "level", "placeofwork", "domain_of_interest", "work_mode"]
+        slots = ["Type", "level", "placeofwork", "domain_of_interest", "mode_of_work"]
 
         for slot in slots:
             if slot not in tracker.slots:
@@ -304,7 +304,7 @@ class ActionOpportunity(Action):
         level = tracker.get_slot("level")
         placeofwork = tracker.get_slot("placeofwork")
         domain_of_interest = tracker.get_slot("domain_of_interest")
-        work_mode = tracker.get_slot("work_mode")
+        mode_of_work = tracker.get_slot("mode_of_work")
 
         # Search for the opportunity in DB
         # If found, return the opportunity
@@ -317,5 +317,5 @@ class ActionOpportunity(Action):
         dispatcher.utter_message("level: {}".format(level))
         dispatcher.utter_message("place of work: {}".format(placeofwork))
         dispatcher.utter_message("domain of interest: {}".format(domain_of_interest))
-        dispatcher.utter_message("work mode: {}".format(work_mode))
+        dispatcher.utter_message("work mode: {}".format(mode_of_work))
         return [SlotSet(slot, None) for slot in slots]
